@@ -60,7 +60,7 @@ earlystopping = callbacks.EarlyStopping(monitor ="val_loss",
                                         restore_best_weights = True)
 #fitting model
 history = model.fit(X_train, Y_train, batch_size =2, 
-                    epochs = 20, validation_data =(X_test, Y_test), 
+                    epochs = 300, validation_data =(X_test, Y_test), 
                     callbacks =[earlystopping]
                     )
 
