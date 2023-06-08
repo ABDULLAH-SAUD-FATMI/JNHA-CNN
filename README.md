@@ -1,5 +1,7 @@
 # JNHA-CNN
+
 CNN model for herb part classification
+
 ############ Basic Intrsuctions ##############################
 1. Ensure the following scripts are present in the folder
 	JNHA-CNN.py
