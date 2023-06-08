@@ -1,26 +1,40 @@
 # JNHA-CNN
-
-CNN model for herb part classification
+CNN model for herbal component classification
 
 ############ Basic Intrsuctions ##############################
-1. Ensure the following scripts are present in the folder
+
+1. In the preprocess/ directory, ensure the following files are present
+
+	'ATR FTIR jinhuacha testing selected mixture-1.csv' (a raw data file )
+	preprocess_data.py
+
+Edit the preprocess_data.py to read in the raw csv file for preprocessing. If it is necessary, you may need to customize or modify the code preprocess_data.py to produce correct preprocessing of the csv data. 
+
+Execute 
+	python preprocess_data.py
+in the presence of the csv file. The output would be (i) a few png files displaying the 1D FTIR fingerprints of the herb classes, (ii) label.npy, and (iii) config.npy
+
+
+2. cd ../
+	Ensure the following scripts are present in the current folder
 	JNHA-CNN.py
 	CNN_SMOTE.py
 	mycnn_model.py
 	test.py
 
-2. Ensure the data is present in the same directory and labelled as follows
+3. Ensure the *.npy data obtained from the precessing in step 1 are present in the same directory and labelled as follows
 	"label.npy"
 	"config.npy"
-where label.npy file is the labels for the data (ie. target class) and the config.npy file is the data
+where label.npy file is the labels for the data (ie. target class) and the config.npy file is the data. 
 
-3. Run the JNHA-CNN.py script
+4. Run the main.py script
 
-4. Change parameters in the JNHA-CNN.py script based on needs
+5. Change parameters in the main.py script based on needs
+
 
 ############# Job of each script ###########################
 
-JNHA-CNN.py: script runs all the scripts required for the creation of the model. It also creates all the prerequisite folders and files required by the rest of the scripts.
+main.py: script runs all the scripts required for the creation of the model. It also creates all the prerequisite folders and files required by the rest of the scripts.
 
 CNN-SMOTE.py: takes the label.npy and config.npy files to artifically augment or synthesize more data. It splits its results into testing training and validation datasets. The final result is 6 npy files, 3 data files and 3 label files. They are named as 
 	"Xa.npy" , "Ya.npy" for training
