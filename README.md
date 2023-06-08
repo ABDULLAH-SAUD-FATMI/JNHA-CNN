@@ -45,4 +45,5 @@ The files starting with "X" denote data and files starting with "Y" denote label
 mycnn_model: Creates the Convoluntional Neural Network(CNN) Model for the herb part classification. It also saves the learning curve of the model training in the "learning_curves" folder. The input is the training and testing dataset, the output given is the CNN model labelled as "model.h5" and learning curve jpeg.
 
 test.py: Tests the saved model's accuracy and saves results in the "performance_run.csv" along with the confusion matrix plot in the "plots" folder. The input is the model and validation dataset (ie. Xc.npy & Yc.npy).The output is vales stored in the csv and a jpeg file in the plots folder.
+
 #######################################
